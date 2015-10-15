@@ -1,4 +1,4 @@
-package dk.spring.mvc;
+package dk.spring.mvc.model;
 
 /**
  * Created by dkontsavoi on 10/15/2015.
