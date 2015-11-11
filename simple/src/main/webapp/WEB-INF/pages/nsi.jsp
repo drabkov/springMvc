@@ -9,7 +9,7 @@
     <title></title>
 </head>
 <body>
-      ${types[1]}
+
 
 </body>
 </html>

@@ -15,13 +15,15 @@ public class RootController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView show() {
-       return new ModelAndView("index");
+        ModelAndView view = new ModelAndView("index");
+        view.addObject("types", nsiService.findAll());
+        return view;
     }
 
-    @RequestMapping(value = "/nsi", method = RequestMethod.GET)
-    public ModelAndView list() {
-        ModelAndView view = new ModelAndView("nsi");
-        view.addObject("types", nsiService.findAll());
+    @RequestMapping(value = "/view", method = RequestMethod.GET)
+    public ModelAndView listAdressTypes() {
+        ModelAndView view = new ModelAndView("addressTypes");
+        view.addObject("addressTypes", nsiService.findAddressTypes());
         return view;
     }
 
