@@ -17,13 +17,13 @@ public class NsiService {
         return NsiTypes.values();
     }
 
-    public AddressType[] findAddressTypes() {
-        AddressType[] addressTypes = new AddressType[4];
+    public ArrayList<AddressType> findAddressTypes() {
+        ArrayList<AddressType>  addressTypes = new ArrayList<AddressType>();
 
-        addressTypes[0] = new AddressType("Адресс доставки корреспонденции", false);
-        addressTypes[1] = new AddressType("Иной адресс", true);
-        addressTypes[2] = new AddressType("Фактический адресс", true);
-        addressTypes[3] = new AddressType("Юридический адресс", true);
+        addressTypes.add(new AddressType("Адресс доставки корреспонденции", true));
+        addressTypes.add(new AddressType("Иной адресс", false));
+        addressTypes.add(new AddressType("Фактический адресс", true));
+        addressTypes.add(new AddressType("Юридический адресс", true));
 
         return addressTypes;
 
