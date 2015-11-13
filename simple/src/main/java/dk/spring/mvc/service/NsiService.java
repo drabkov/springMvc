@@ -1,6 +1,7 @@
 package dk.spring.mvc.service;
 
 import dk.spring.mvc.model.AddressType;
+import dk.spring.mvc.model.KBK;
 import dk.spring.mvc.model.NsiTypes;
 import org.springframework.stereotype.Service;
 
@@ -29,4 +30,10 @@ public class NsiService {
 
     }
 
+    public ArrayList<KBK> findKBK() {
+        ArrayList<KBK>  list = new ArrayList<KBK>();
+
+        return list;
+
+    }
 }

@@ -20,11 +20,17 @@ public class RootController {
         return view;
     }
 
-    @RequestMapping(value = "/view", method = RequestMethod.GET)
+    @RequestMapping(value = "/view", params = "catalogType=AddressTypes", method = RequestMethod.GET)
     public ModelAndView listAdressTypes() {
         ModelAndView view = new ModelAndView("addressTypes");
         view.addObject("addressTypes", nsiService.findAddressTypes());
         return view;
     }
 
+    @RequestMapping(value = "/view", params = "catalogType=KBK", method = RequestMethod.GET)
+    public ModelAndView listKBK() {
+        ModelAndView view = new ModelAndView("nsi");
+
+        return view;
+    }
 }
