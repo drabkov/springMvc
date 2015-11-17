@@ -20,7 +20,7 @@
   <a href="/">Вернуться к списку справочников</a> <br/>
   <h3>Справочник "Типы адресов"</h3>
 
-  <table class="table table-striped">
+  <table class="table">
   <tr>
     <th>Наименование</th>
     <th>Актуальность</th>

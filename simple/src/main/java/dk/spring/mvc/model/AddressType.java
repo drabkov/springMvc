@@ -5,6 +5,7 @@ package dk.spring.mvc.model;
  */
 public class AddressType {
 
+
     private String name;
     private boolean actual;
 

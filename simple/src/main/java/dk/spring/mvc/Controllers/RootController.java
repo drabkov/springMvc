@@ -14,23 +14,37 @@ public class RootController {
     public NsiService nsiService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView show() {
+    public ModelAndView viewListCatalogs() {
         ModelAndView view = new ModelAndView("index");
         view.addObject("types", nsiService.findAll());
         return view;
     }
 
-    @RequestMapping(value = "/view", params = "catalogType=AddressTypes", method = RequestMethod.GET)
-    public ModelAndView listAdressTypes() {
+    @RequestMapping(value = "/viewCatalog", params = "catalogType=AddressTypes", method = RequestMethod.GET)
+    public ModelAndView viewAdressTypes() {
         ModelAndView view = new ModelAndView("addressTypes");
         view.addObject("addressTypes", nsiService.findAddressTypes());
         return view;
     }
 
-    @RequestMapping(value = "/view", params = "catalogType=KBK", method = RequestMethod.GET)
-    public ModelAndView listKBK() {
-        ModelAndView view = new ModelAndView("nsi");
+    @RequestMapping(value = "/viewCatalog", params = "catalogType=KBK", method = RequestMethod.GET)
+    public ModelAndView viewKBK() {
+        ModelAndView view = new ModelAndView("catalog");
 
+        return view;
+    }
+
+    @RequestMapping(value = "/viewCatalog", params = "catalogType=OKPD", method = RequestMethod.GET)
+    public ModelAndView viewOKPD() {
+        ModelAndView view = new ModelAndView("catalog");
+
+        return view;
+    }
+
+    @RequestMapping(value = "/editCatalog", params = "catalogType=AddressTypes", method = RequestMethod.GET)
+    public ModelAndView editAdressTypes() {
+        ModelAndView view = new ModelAndView("editAddressTypes");
+        view.addObject("addressTypes", nsiService.findAddressTypes());
         return view;
     }
 }

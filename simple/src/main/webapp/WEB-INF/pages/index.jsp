@@ -12,19 +12,19 @@
 
         <h3>Список справочников</h3>
 
-        <table class="table table-striped">
+        <table class="table">
             <thead>
             <tr>
-                <th>Справочник</th>
-                <th>Редактировать</th>
+                <th>Наименование справочника</th>
+                <th></th>
             </tr>
                <c:forEach items="${types}" var="type">
                 <tr>
-                    <td><a href="/view?catalogType=${type}">${type.title}</a></td>
+                    <td><a href="/viewCatalog?catalogType=${type}">${type.title}</a></td>
                     <td>
-                        <button type="button" class="btn btn-default btn-sm">
+                        <a href="/editCatalog?catalogType=${type}" class="btn btn-default btn-sm">
                             <span class="glyphicon glyphicon-pencil"></span> Редактировать
-                        </button>
+                        </a>
                     </td>
                 </tr>
             </c:forEach>

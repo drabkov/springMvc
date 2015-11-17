@@ -1,11 +1,12 @@
 package dk.spring.mvc.service;
 
 import dk.spring.mvc.model.AddressType;
-import dk.spring.mvc.model.KBK;
+import dk.spring.mvc.model.Catalog;
 import dk.spring.mvc.model.NsiTypes;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dkontsavoi on 10/15/2015.
@@ -18,22 +19,22 @@ public class NsiService {
         return NsiTypes.values();
     }
 
-    public ArrayList<AddressType> findAddressTypes() {
-        ArrayList<AddressType>  addressTypes = new ArrayList<AddressType>();
+    public List<AddressType> findAddressTypes() {
+        List<AddressType> addressTypes = new ArrayList<AddressType>();
 
-        addressTypes.add(new AddressType("Адресс доставки корреспонденции", true));
-        addressTypes.add(new AddressType("Иной адресс", false));
-        addressTypes.add(new AddressType("Фактический адресс", true));
-        addressTypes.add(new AddressType("Юридический адресс", true));
+        addressTypes.add(new AddressType("Адрес доставки корреспонденции", true));
+        addressTypes.add(new AddressType("Иной адрес", false));
+        addressTypes.add(new AddressType("Фактический адрес", true));
+        addressTypes.add(new AddressType("Юридический адрес", true));
 
         return addressTypes;
 
     }
 
-    public ArrayList<KBK> findKBK() {
-        ArrayList<KBK>  list = new ArrayList<KBK>();
+    public ArrayList<Catalog> findKBK() {
+        ArrayList<Catalog>  catalog = new ArrayList<Catalog>();
 
-        return list;
+        return catalog;
 
     }
 }
