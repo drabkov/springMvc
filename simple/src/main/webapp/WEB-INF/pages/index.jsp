@@ -16,8 +16,9 @@
             <thead>
             <tr>
                 <th>Наименование справочника</th>
-                <th></th>
+                <th>Редактировать</th>
             </tr>
+            </thead>
                <c:forEach items="${types}" var="type">
                 <tr>
                     <td><a href="/viewCatalog?catalogType=${type}">${type.title}</a></td>
