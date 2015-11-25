@@ -15,20 +15,16 @@
     </a> <br/>
 
   <table class="table">
-    <tr>
-      <td><input type="text" class="form-control" id="name"></td>
-      <td><input type="checkbox" value=""></td>
-      <td>
-        <a href="/addElementCatalog?catalogType=${type}" class="btn btn-default btn-sm">
-          Добавить запись
-        </a>
-      </td>
-    </tr>
-
-  </table>
-
-  <table class="table">
    <thead>
+   <tr>
+       <td><input type="text" class="form-control" id="name"></td>
+       <td><input type="checkbox" value=""></td>
+       <td>
+           <a href="/addElement" class="btn btn-default btn-sm">
+               Добавить запись
+           </a>
+       </td>
+   </tr>
     <tr>
       <th>Наименование*</th>
       <th>Актуальность</th>
@@ -46,8 +42,11 @@
       <tr>
 
           <td>
-              <a href="/addElementCatalog?catalogType=${type}" class="btn btn-default btn-sm">
+              <a href="/saveAll" class="btn btn-default btn-sm">
                   Сохранить
+              </a>
+              <a href="/cancelAll" class="btn btn-default btn-sm">
+                  Отменить
               </a>
           </td>
       </tr>
