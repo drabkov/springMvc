@@ -5,8 +5,8 @@ package dk.spring.mvc.model;
  */
 public enum NsiTypes {
 
-    KBK("КБК"),
-    OKPD("ОКПД"),
+    KBK("Коды бюджетной класификации"),
+    OKPD("Общероссийский классификатор по видам экономической деятельности"),
     AddressTypes("Типы адресов");
 
     String title;
