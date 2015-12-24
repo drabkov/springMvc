@@ -8,13 +8,13 @@ public class Catalog {
     private String id;
     private String name;
     private boolean actual;
-    private String parentId;
+    private Catalog parent;
 
     public Catalog(String id, String name, boolean actual, String parentId){
         this.id = id;
         this.name = name;
         this.actual = actual;
-        this.parentId = parentId;
+        this.parent = parent;
     }
 
     public String getName() {
@@ -41,11 +41,11 @@ public class Catalog {
         this.id = id;
     }
 
-    public String getParentId() {
-        return parentId;
+    public Catalog getParent(){
+        return parent;
     }
 
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
+    public void setParentId(Catalog parent) {
+        this.parent = parent;
     }
 }
